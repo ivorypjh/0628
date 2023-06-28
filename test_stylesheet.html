@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stylesheet_test</title>
+    <!-- 스타일은 태그를 모두 읽은 다음에 적용되기에 위치는 중요하지 않음 -->
+    <style>
+        .color_area{
+            color : skyblue
+        }
+    </style>
+</head>
+<body text = "red">
+    <!-- 상대 경로를 이용한 이동 -->
+    <!-- target을 적용해서 새 탭에서 열리도록 조절 -->
+    <p><a href = "./test.html" target = "_blank">html 이동</a></p>
+    <hr width = "10%" size = "2" align = "left">
+    <!-- 절대 경로를 이용한 이동 -->
+    <a href = "https://www.google.co.kr">구글로 이동</a>
+    <p class = "color_area" >첫번째 태그 <br /> 줄바꿈 </p>
+    <p class = "color_area" >두번째 태그</p>
+    <p id = "3rd_tag" >세번째 태그</p>
+
+    <script> 
+    document.getElementById("3rd_tag").addEventListener("click", function(e){
+        document.getElementById("3rd_tag").innerHTML = "클릭 성공"
+    })
+    </script>
+
+    <ul>
+        <li>월</li>
+        <li>화</li>
+    </ul>
+
+    
+</body>
+</html>
